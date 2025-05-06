@@ -21,7 +21,7 @@ sources:
         identifier: raw_gz_product
         description: products sold by Greenweez
         columns:
-          - name: products_id
+          - name: product_id
             description: Products Identification
             tests:
               - unique
