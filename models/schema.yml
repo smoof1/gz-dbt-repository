@@ -5,7 +5,44 @@ sources:
     tables:
       - name: sales
         identifier: raw_gz_sales
-      - name: product
+        description: sales of Greenweez / we have on row per product_id found in each orders_id
+        columns:
+          - name: date_date
+            description: date of purchase
+          - name: orders_id
+            description: Order Identification
+          - name: product_id
+            description: Product Identification
+          - name: revenue
+            description: amount of revenue
+          - name: quantity
+            description: amount of product ordered        
+      - name: product 
         identifier: raw_gz_product
+        description: products sold by Greenweez
+        columns:
+          - name: products_id
+            description: Products Identification
+            tests:
+              - unique
+              - not_null
+          - name: purchase_price
+            description: how much is the product  
       - name: ship
         identifier: raw_gz_ship
+        description: Orders shipped by Greenweez
+        columns:
+          - name: orders_id
+            description: Order Identification
+            tests:
+              - unique
+              - not_null
+          - name: shipping_fee
+            description: money customer has to pay for shipment
+          - name: logcost
+            description: cost for logistics
+          - name: ship_cost
+            description: cost for shipment
+        
+
+          
