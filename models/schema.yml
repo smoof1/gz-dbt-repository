@@ -43,6 +43,17 @@ sources:
             description: cost for logistics
           - name: ship_cost
             description: cost for shipment
-        
+      - name: adwords
+        identifier: raw_gz_adwords  
+        description: how did all the campaigns perform
+      - name: bing
+        identifier: raw_gz_bing
+        description: how did the bing campaigns perform
+      - name: criteo
+        identifier: raw_gz_criteo
+        description: how did the criteo campaigns perform
+      - name: facebook
+        identifier: raw_gz_facebook
+        description: how did the facebook campaigns perform  
 
           
