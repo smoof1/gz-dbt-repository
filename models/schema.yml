@@ -45,15 +45,87 @@ sources:
             description: cost for shipment
       - name: adwords
         identifier: raw_gz_adwords  
-        description: how did all the campaigns perform
+        description: how did the adwords campaigns perform
+        tests:
+          - unique:
+              column_name: "(campaign_key || '-' || date_date)"
+        columns:
+          - name: date_date
+            description: date the ad run
+          - name:  paid_source
+            description: where the ad run
+          - name: campaign_key
+            description: Identifier for the campaign
+          - name: campaign_name
+            description: name of the campaign
+          - name: ads_cost
+            description: money spent on the ads
+          - name: impression
+            description: number of views
+          - name: click
+            description: number of clicks          
       - name: bing
         identifier: raw_gz_bing
         description: how did the bing campaigns perform
+        tests:
+          - unique:
+              column_name: "(campaign_key || '-' || date_date)"
+        columns:
+          - name: date_date
+            description: date the ad run
+          - name:  paid_source
+            description: where the ad run
+          - name: campaign_key
+            description: Identifier for the campaign
+          - name: campaign_name
+            description: name of the campaign
+          - name: ads_cost
+            description: money spent on the ads
+          - name: impression
+            description: number of views
+          - name: click
+            description: number of clicks
       - name: criteo
         identifier: raw_gz_criteo
-        description: how did the criteo campaigns perform
+        description: how did the criteo campaigns
+        tests:
+          - unique:
+              column_name: "(campaign_key || '-' || date_date)" 
+        columns:
+          - name: date_date
+            description: date the ad run
+          - name:  paid_source
+            description: where the ad run
+          - name: campaign_key
+            description: Identifier for the campaign
+          - name: campaign_name
+            description: name of the campaign
+          - name: ads_cost
+            description: money spent on the ads
+          - name: impression
+            description: number of views
+          - name: click
+            description: number of clicks
       - name: facebook
         identifier: raw_gz_facebook
-        description: how did the facebook campaigns perform  
+        description: how did the facebook campaigns perform
+        tests:
+          - unique:
+              column_name: "(campaign_key || '-' || date_date)"
+        columns:
+          - name: date_date
+            description: date the ad run
+          - name:  paid_source
+            description: where the ad run
+          - name: campaign_key
+            description: Identifier for the campaign
+          - name: campaign_name
+            description: name of the campaign
+          - name: ads_cost
+            description: money spent on the ads
+          - name: impression
+            description: number of views
+          - name: click
+            description: number of clicks
 
           
